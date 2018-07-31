@@ -2,16 +2,9 @@
 version: 2
 workflows:
   version: 2
-  nightly:
+  pipeline:
     jobs:
       - build
-    triggers:
-      - schedule:
-          cron: "0 23 */2 * *"
-          filters:
-            branches:
-              only:
-                - master
 jobs:
   build:
     machine: true
