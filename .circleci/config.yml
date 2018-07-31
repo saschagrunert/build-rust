@@ -1,0 +1,16 @@
+---
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Login to registry
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run:
+          name: Build the image
+          command: docker build -t saschagrunert/build-rust .
+      - run:
+          name: Push the image
+          command: docker push saschagrunert/build-rust:latest
