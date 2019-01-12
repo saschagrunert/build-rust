@@ -5,6 +5,7 @@ RUN pacman --noconfirm -Sy \
     base-devel \
     cmake \
     curl \
+    freetype2 \
     git \
     kcov \
     openssh \
