@@ -1,6 +1,7 @@
 FROM archlinux/base:latest
 ENV PATH /root/.cargo/bin:${PATH}
 RUN pacman --noconfirm -Sy \
+    alsa-lib \
     base-devel \
     cmake \
     curl \
