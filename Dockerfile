@@ -8,6 +8,10 @@ RUN pacman --noconfirm -Sy \
     kcov \
     openssh \
     postgresql-libs \
+    python \
+    vulkan-headers \
+    vulkan-tools \
+    vulkan-validation-layers \
     wget
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN rustup toolchain add beta && \
