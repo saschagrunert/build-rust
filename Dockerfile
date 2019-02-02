@@ -3,6 +3,7 @@ ENV PATH /root/.cargo/bin:${PATH}
 RUN zypper in -t pattern -ly devel_C_C++
 RUN zypper in -ly \
     alsa-devel \
+    binutils \
     cmake \
     curl \
     expat \
@@ -10,6 +11,7 @@ RUN zypper in -ly \
     gcc-c++ \
     git \
     jq \
+    libcurl-devel \
     libexpat-devel \
     libelf-devel \
     libdw-devel \
