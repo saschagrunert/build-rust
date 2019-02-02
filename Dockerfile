@@ -1,6 +1,5 @@
 FROM opensuse/tumbleweed
 ENV PATH /root/.cargo/bin:${PATH}
-COPY assets/kcov-system-daemon /bin
 RUN zypper in -t pattern -ly devel_C_C++
 RUN zypper in -ly \
     alsa-devel \
@@ -10,7 +9,11 @@ RUN zypper in -ly \
     freetype2-devel \
     gcc-c++ \
     git \
+    jq \
     libexpat-devel \
+    libelf-devel \
+    libdw-devel \
+    libiberty-devel \
     libopenssl-devel \
     libxcb-devel \
     openssh \
@@ -25,7 +28,8 @@ RUN rustup component add clippy rustfmt && \
         asmjs-unknown-emscripten
 RUN cargo install \
     cargo-edit \
-    cargo-kcov \
+    cargo-kcov \d
     cargo-update \
     cargo-web
+RUN cargo kcov --print-install-kcov-sh | sh
 RUN cargo install diesel_cli --no-default-features --features postgres
