@@ -6,6 +6,7 @@ RUN zypper in -ly \
     alsa-devel \
     cmake \
     curl \
+    freetype2-devel \
     git \
     libopenssl-devel \
     openssh \
