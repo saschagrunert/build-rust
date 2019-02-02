@@ -12,7 +12,7 @@ RUN zypper in -ly \
     git \
     libexpat-devel \
     libopenssl-devel \
-    libxcb \
+    libxcb-devel \
     openssh \
     postgresql-devel \
     python \
