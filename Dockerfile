@@ -6,9 +6,11 @@ RUN zypper in -ly \
     alsa-devel \
     cmake \
     curl \
+    expat \
     freetype2-devel \
     gcc-c++ \
     git \
+    libexpat-devel \
     libopenssl-devel \
     openssh \
     postgresql-devel \
