@@ -28,7 +28,7 @@ RUN rustup component add clippy rustfmt && \
         asmjs-unknown-emscripten
 RUN cargo install \
     cargo-edit \
-    cargo-kcov \d
+    cargo-kcov \
     cargo-update \
     cargo-web
 RUN cargo kcov --print-install-kcov-sh | sh
