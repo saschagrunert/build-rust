@@ -13,7 +13,6 @@ RUN zypper in -ly \
     libexpat-devel \
     libelf-devel \
     libdw-devel \
-    libiberty-devel \
     libopenssl-devel \
     libxcb-devel \
     openssh \
