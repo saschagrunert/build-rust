@@ -1,30 +1,19 @@
-FROM archlinux/base:latest
+FROM opensuse/tumbleweed
 ENV PATH /root/.cargo/bin:${PATH}
-RUN pacman --noconfirm -Sy \
-    alsa-lib \
-    base-devel \
+COPY assets/kcov-system-daemon /bin
+RUN zypper in -t pattern -ly devel_C_C++
+RUN zypper in -ly \
+    alsa-devel \
     cmake \
     curl \
-    freetype2 \
     git \
-    kcov \
     openssh \
-    postgresql-libs \
+    postgresql-devel \
     python \
-    vulkan-headers \
-    vulkan-tools \
-    vulkan-validation-layers \
     wget
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-RUN rustup toolchain add beta && \
-    rustup default nightly && \
-    rustup component add \
-        clippy-preview \
-        rls-preview \
-        rust-analysis \
-        rustfmt-preview && \
+RUN rustup component add clippy rustfmt && \
     rustup target add \
-        --toolchain nightly \
         wasm32-unknown-unknown \
         wasm32-unknown-emscripten \
         asmjs-unknown-emscripten
