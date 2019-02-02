@@ -7,7 +7,7 @@ RUN zypper in -ly \
     cmake \
     curl \
     freetype2-devel \
-    gcc8-c++ \
+    gcc-c++ \
     git \
     libopenssl-devel \
     openssh \
