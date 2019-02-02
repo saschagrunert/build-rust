@@ -7,6 +7,7 @@ RUN zypper in -ly \
     cmake \
     curl \
     git \
+    libopenssl-devel \
     openssh \
     postgresql-devel \
     python \
