@@ -10,6 +10,7 @@ RUN zypper in -ly \
     freetype2-devel \
     gcc-c++ \
     git \
+    gzip \
     jq \
     libcurl-devel \
     libexpat-devel \
