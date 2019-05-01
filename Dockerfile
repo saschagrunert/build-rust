@@ -4,6 +4,7 @@ RUN zypper in -t pattern -ly devel_C_C++
 RUN zypper in -ly \
     alsa-devel \
     binutils \
+    binutils-devel \
     cmake \
     curl \
     expat \
