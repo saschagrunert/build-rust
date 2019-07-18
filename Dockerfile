@@ -13,6 +13,7 @@ RUN zypper in -ly \
     git \
     gzip \
     jq \
+    kcov \
     libcurl-devel \
     libexpat-devel \
     libelf-devel \
@@ -34,5 +35,4 @@ RUN cargo install \
     cargo-kcov \
     cargo-update \
     cargo-web
-RUN cargo kcov --print-install-kcov-sh | sh
 RUN cargo install diesel_cli --no-default-features --features postgres
