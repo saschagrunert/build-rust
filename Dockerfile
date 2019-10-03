@@ -11,19 +11,22 @@ RUN zypper in -ly \
     freetype2-devel \
     gcc-c++ \
     git \
+    go1.12 \
     gzip \
     jq \
     kcov \
     libcurl-devel \
-    libexpat-devel \
-    libelf-devel \
     libdw-devel \
+    libelf-devel \
+    libexpat-devel \
     libopenssl-devel \
     libxcb-devel \
     openssh \
     postgresql-devel \
     python \
     wget
+RUN go get -u github.com/cloudflare/cfssl/cmd/...
+RUN ln -s /root/go/bin/* /bin/
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
 RUN rustup component add clippy rustfmt && \
     rustup target add \
