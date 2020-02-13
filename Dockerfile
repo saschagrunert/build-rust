@@ -15,7 +15,7 @@ RUN zypper in -ly \
     gzip \
     jq \
     kcov \
-    kubectl \
+    kubernetes-client \
     libcurl-devel \
     libdw-devel \
     libelf-devel \
