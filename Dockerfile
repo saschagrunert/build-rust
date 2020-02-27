@@ -23,6 +23,7 @@ RUN zypper in -ly \
     libopenssl-devel \
     libxcb-devel \
     openssh \
+    postgresql12 \
     postgresql-devel \
     python \
     wget
