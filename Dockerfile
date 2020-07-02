@@ -22,6 +22,7 @@ RUN zypper in -ly \
     libexpat-devel \
     libopenssl-devel \
     libxcb-devel \
+    npm \
     openssh \
     postgresql12 \
     postgresql-devel \
@@ -42,3 +43,4 @@ RUN cargo install \
     cargo-web \
     wasm-pack
 RUN cargo install diesel_cli --no-default-features --features postgres
+RUN npm install -g rollup
