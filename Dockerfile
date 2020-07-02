@@ -39,5 +39,6 @@ RUN cargo install \
     cargo-edit \
     cargo-kcov \
     cargo-update \
-    cargo-web
+    cargo-web \
+    wasm-pack
 RUN cargo install diesel_cli --no-default-features --features postgres
